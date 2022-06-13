@@ -1,0 +1,156 @@
+<!--	dit is enkel om direct te kunnen testen -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+	android:gravity="center"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+	<Button
+		android:id="@+id/buttonPlayCard"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text=" OK " />
+	<TextView
+		android:id="@+id/textView1"
+		android:layout_width="300px"
+		android:layout_height="300px"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textSize="19dp"
+		android:text="pas1" />
+
+	<TextView
+		android:id="@+id/textView2"
+		android:layout_width="300px"
+		android:layout_height="300px"
+		android:rotation="90"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textSize="19dp"
+		android:text="pas2" />
+	
+	<TextView
+		android:id="@+id/textView3"
+		android:layout_width="300px"
+		android:layout_height="300px"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textSize="19dp"
+		android:text="pas3" />
+
+	<TextView
+		android:id="@+id/textView4"
+		android:layout_width="300px"
+		android:layout_height="300px"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textSize="19dp"
+		android:rotation="-90"
+		android:text="pas4" />
+	
+	<LinearLayout
+		android:id="@+id/layout"
+		android:orientation="horizontal"
+		android:background="#FFFFFF"
+		android:gravity="center"
+		android:layout_gravity="center"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+		<LinearLayout
+			android:orientation="vertical"
+			android:gravity="bottom"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent">
+			<Button
+				android:id="@+id/buttonchangeplayer2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text=" 2 " />
+			<Button
+				android:id="@+id/buttonchangeplayer1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text=" 1 " />
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<Button
+				android:id="@+id/buttonload1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal" />
+			<Button
+				android:id="@+id/buttonload2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal" />
+			<Button
+				android:id="@+id/buttonload3"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal" />
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<Button
+				android:id="@+id/buttondealer"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:text=" DEALER = 1" />
+			<Button
+				android:id="@+id/buttontrumpcategory"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:text=" TRUMPCATEGORY =  1" />
+			<Button
+				android:id="@+id/buttonscramblecards"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:text=" SCRAMBLE CARDS " />
+			<Button
+				android:id="@+id/buttonstartgame"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="          START GAME          " />
+		</LinearLayout>	
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<Button
+				android:id="@+id/buttonsave1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text=" SAVE1 " />
+			<Button
+				android:id="@+id/buttonsave2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text=" SAVE2 " />
+			<Button
+				android:id="@+id/buttonsave3"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text=" SAVE3 " />
+		</LinearLayout>	
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent">
+			<Button
+				android:id="@+id/buttonchangeplayer3"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text=" 3 " />
+			<Button
+				android:id="@+id/buttonchangeplayer4"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text=" 4 " />
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>
+
+<!--	android:background="#FFFFFF" -->

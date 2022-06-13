@@ -1,13 +1,840 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>	
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootmain"
+	android:orientation="vertical"
+	android:gravity="center"  
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:gravity="center"
-    android:orientation="vertical" >
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello" />
-
+    android:layout_height="50000px" >  <!--is nodig voor de kleinere schermen -->
+	<Button
+		android:id="@+id/buttonSaveAsExternalStorage"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:text=" SAVE AS EXTERNALSTORAGE " />
+	
+	<Button
+		android:id="@+id/buttonToast"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:rotation="90"
+		android:text=" TOAST ON " />
+	<Button
+		android:id="@+id/buttonResetPoints"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:rotation="90"
+		android:text=" RESET POINTS " />
+	<Button
+		android:id="@+id/buttonload1"
+		android:visibility="invisible"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
+	<Button
+		android:id="@+id/buttonload2"
+		android:visibility="invisible"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
+	<Button
+		android:id="@+id/buttonload3"
+		android:visibility="invisible"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"/>
+	<Button
+		android:id="@+id/buttonBack2"
+		android:visibility="invisible"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text=" BACK " />
+	<Button
+		android:id="@+id/buttonRestart"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:text=" RESTART " />
+	<Button
+		android:id="@+id/buttonZoekenNaar"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:text=" ZOEKEN NAAR " />
+	<Button
+		android:id="@+id/buttonChangeSearching"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:gravity="left"
+		android:layout_gravity="left"
+		android:text="ALLEEN (enkel bij laatste speler)" />
+	<Button
+		android:id="@+id/buttonChooseAgain"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:text=" CHOOSE AGAIN " />
+	<TextView
+		android:id="@+id/textViewTrump"
+		android:layout_width="400px"
+		android:layout_height="400px"
+		android:visibility="invisible"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textSize="19dp"
+		android:text="trump = " />
+	<TextView
+		android:id="@+id/textViewOpenM"
+		android:layout_width="400px"
+		android:layout_height="400px"
+		android:visibility="invisible"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textSize="19dp"
+		android:text="openmisere nok" />
+	<Button
+		android:id="@+id/buttonPlayCard"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:text=" OK " />
+	<Button
+		android:id="@+id/buttonPlayTheCards"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:text=" START " />
+	<Button
+		android:id="@+id/buttonStopPlayTheCards"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:text=" STOP " />
+	<Button
+		android:id="@+id/buttonSettings"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:text=" SETTINGS " />
+	<Button
+		android:id="@+id/buttonSave"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:text=" SAVE " />
+	<TextView
+		android:id="@+id/textView1"
+		android:layout_width="400px"
+		android:layout_height="400px"
+		android:visibility="invisible"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textSize="19dp" />
+	<TextView
+		android:id="@+id/textView2"
+		android:layout_width="400px"
+		android:layout_height="400px"
+		android:visibility="invisible"
+		android:rotation="90"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textSize="19dp" />
+	<TextView
+		android:id="@+id/textView3"
+		android:layout_width="400px"
+		android:layout_height="400px"
+		android:visibility="invisible"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textSize="19dp" />
+	<TextView
+		android:id="@+id/textView4"
+		android:layout_width="400px"
+		android:layout_height="400px"
+		android:visibility="invisible"
+		android:rotation="-90"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textSize="19dp" />
+	<LinearLayout
+		android:id="@+id/startmain"
+		android:orientation="horizontal"
+		android:gravity="center"
+		android:layout_gravity="center"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+		<Button
+			android:id="@+id/buttonZoekFout"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text=" ZOEK FOUT VIA EXTERNALSTORAGE(SAVE4) "   />
+		<Button
+			android:id="@+id/buttonDoorgaan"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text=" DOORGAAN VIA SAVE1->3 "   />
+	</LinearLayout>
+	<LinearLayout
+		android:id="@+id/layout"
+		android:orientation="horizontal"
+		android:background="#FFFFFF"
+		android:gravity="center"
+		android:visibility="invisible"
+		android:layout_gravity="center"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+		<LinearLayout
+			android:orientation="vertical"
+			android:gravity="bottom"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent">
+			<CheckBox
+				android:id="@+id/vastsp3"
+				android:text="v3"
+				android:saveEnabled="false"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />
+			<CheckBox
+				android:id="@+id/vastsp2"
+				android:text="v2"
+				android:saveEnabled="false"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />
+			<Button
+				android:id="@+id/buttonchangeplayer2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text=" 2 " />
+			<Button
+				android:id="@+id/buttonchangeplayer1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text=" 1 " />
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<Button
+				android:id="@+id/buttondealer"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:text=" DEALER =  " />
+			<Button
+				android:id="@+id/buttontrumpcategory"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:text=" TRUMPCATEGORY =   " />
+			<Button
+				android:id="@+id/buttonscramblecards"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:text=" SCRAMBLE CARDS " />
+			<Button
+				android:id="@+id/buttonstartgame"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="          START GAME          " />
+		</LinearLayout>	
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<Button
+				android:id="@+id/buttonsave1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text=" SAVE1 " />
+			<Button
+				android:id="@+id/buttonsave2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text=" SAVE2 " />
+			<Button
+				android:id="@+id/buttonsave3"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text=" SAVE3 " />
+		</LinearLayout>	
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent">
+			<Button
+				android:id="@+id/buttonchangeplayer3"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text=" 3 " />
+			<Button
+				android:id="@+id/buttonchangeplayer4"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text=" 4 " />
+			<CheckBox
+				android:id="@+id/vastsp4"
+				android:text="v4"
+				android:saveEnabled="false"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />
+			<CheckBox
+				android:id="@+id/vastsp1"
+				android:text="v1"
+				android:saveEnabled="false"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />
+		</LinearLayout>
+	</LinearLayout>
+	<LinearLayout
+		android:id="@+id/layoutchoice"
+		android:orientation="horizontal"
+		android:background="#FFFFFF"
+		android:gravity="center"
+		android:visibility="invisible"
+		android:layout_gravity="center"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				<Button
+					android:id="@+id/buttonBack"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_horizontal"
+					android:text="     BACK     " />
+				<Button
+					android:id="@+id/buttonchoiceself"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_horizontal"
+					android:text="  CHOICE SELF  " />
+				<Button
+					android:id="@+id/buttonchoiceselfcategory"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_horizontal"
+					android:text=" / " />
+			</LinearLayout>
+			<TextView
+				android:id="@+id/textViewDealer"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_gravity="center_horizontal"
+				android:textSize="19dp"
+				android:text="dealer = " />
+			<TextView
+				android:id="@+id/textViewTrumpCategory"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_gravity="center_horizontal"
+				android:textSize="19dp"
+				android:text="trumpcategory = " />
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				<Button
+					android:id="@+id/buttonchoiceagain"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_horizontal"
+					android:text=" CHOICE AGAIN " />
+				<Button
+					android:id="@+id/buttonchoiceok"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_horizontal"
+					android:text="            OK            " />
+			</LinearLayout>
+			<Button
+				android:id="@+id/buttonchoiceall"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:text="          CHOICE ALL          " />
+		</LinearLayout>	
+	
+	</LinearLayout>  
+	 
+	<!--   android:scaleX="0.85"
+		   android:scaleY="0.85"    -->
+	 
+	<ImageView
+		android:id="@+id/player0_card1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	
+	<ImageView
+		android:id="@+id/player0_card2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	
+	<ImageView
+		android:id="@+id/player0_card3"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	
+	<ImageView
+		android:id="@+id/player0_card4"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	
+	 
+	<ImageView
+		android:id="@+id/player1_card1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player1_card2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player1_card3"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player1_card4"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player1_card5"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player1_card6"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player1_card7"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player1_card8"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player1_card9"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player1_card10"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player1_card11"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player1_card12"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player1_card13"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player2_card1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player2_card2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player2_card3"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player2_card4"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player2_card5"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player2_card6"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player2_card7"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player2_card8"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player2_card9"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player2_card10"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player2_card11"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player2_card12"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player2_card13"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player3_card1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player3_card2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player3_card3"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player3_card4"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player3_card5"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player3_card6"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player3_card7"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player3_card8"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player3_card9"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player3_card10"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player3_card11"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player3_card12"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player3_card13"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player4_card1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player4_card2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player4_card3"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player4_card4"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player4_card5"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player4_card6"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player4_card7"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player4_card8"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player4_card9"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player4_card10"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player4_card11"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player4_card12"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player4_card13"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="invisible"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	
+	 
+	<ImageView
+		android:id="@+id/player0_card5"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player0_card6"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player0_card7"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
+	 
+	<ImageView
+		android:id="@+id/player0_card8"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="@drawable/shadow_no_offset"
+		android:src="@drawable/card_back" />
 </LinearLayout>
+<!--	android:background="#FFFFFF" -->
+     
